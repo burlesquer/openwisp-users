@@ -113,7 +113,7 @@ class MultitenantAdminMixin(object):
         # made to fetch users of organizations managed by the logged-in user.
         # This approach avoids duplicate objects for users that are admin of
         # multiple organizations managed by the logged-in user.
-        # See https://github.com/openwisp/openwisp-users/issues/324.
+        # See https://github.com/burlesquer/openwisp-users/issues/324.
         # We cannot use .distinct() on the User query directly, because
         # it causes issues when performing delete action from the admin.
         user_ids = (

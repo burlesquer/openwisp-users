@@ -13,7 +13,7 @@ class BaseAdmin(BaseModelAdmin):
 def usermodel_add_form(model, additional_fields):
     """
     Read:
-    https://github.com/openwisp/openwisp-users/blob/master/README.rst#usermodel_add_form
+    https://github.com/burlesquer/openwisp-users/blob/master/README.rst#usermodel_add_form
     """
 
     for field in additional_fields:
@@ -35,7 +35,7 @@ def usermodel_add_form(model, additional_fields):
 def usermodel_change_form(model, additional_fields):
     """
     Read:
-    https://github.com/openwisp/openwisp-users/blob/master/README.rst#usermodel_change_form
+    https://github.com/burlesquer/openwisp-users/blob/master/README.rst#usermodel_change_form
     """
 
     # Change form fieldsets
@@ -49,7 +49,7 @@ def usermodel_change_form(model, additional_fields):
 def usermodel_list_and_search(model, additional_fields):
     """
     Read:
-    https://github.com/openwisp/openwisp-users/blob/master/README.rst#usermodel_list_and_search
+    https://github.com/burlesquer/openwisp-users/blob/master/README.rst#usermodel_list_and_search
     """
 
     # Change form fieldsets

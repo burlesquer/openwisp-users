@@ -48,7 +48,7 @@ setup(
     description='Provides basic multi-tenancy features for OpenWISP (using the Django web-framework)',
     long_description=open('README.rst').read(),
     url='http://openwisp.org',
-    download_url='https://github.com/openwisp/openwisp-users/releases',
+    download_url='https://github.com/burlesquer/openwisp-users/releases',
     platforms=['Platform Independent'],
     keywords=['openwisp', 'django', 'organizations', 'users'],
     packages=find_packages(exclude=['tests*', 'docs*']),

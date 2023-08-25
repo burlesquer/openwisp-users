@@ -34,41 +34,41 @@ Features
 ~~~~~~~~
 
 - Added `UsersAuthenticationBackend class
-  <https://github.com/openwisp/openwisp-users#authentication-backend>`_
+  <https://github.com/burlesquer/openwisp-users#authentication-backend>`_
   that allows users to authenticate using either email, phone_number or username.
 - Added the possibility to filter users by their organization in
   the user administration section.
 - Added `REST API endpoints for openwisp-users
-  <https://github.com/openwisp/openwisp-users#list-of-endpoints>`_.
+  <https://github.com/burlesquer/openwisp-users#list-of-endpoints>`_.
 - Added various `Django REST Framework mixins and utilities
-  <https://github.com/openwisp/openwisp-users#django-rest-framework-mixins>`_
+  <https://github.com/burlesquer/openwisp-users#django-rest-framework-mixins>`_
   which allow to implement.
 - Added `DRF permission classes
-  <https://github.com/openwisp/openwisp-users#django-rest-framework-permission-classes>`_.
+  <https://github.com/burlesquer/openwisp-users#django-rest-framework-permission-classes>`_.
 - Added `passwordless authentication backend for REST APIs
-  <https://github.com/openwisp/openwisp-users#2-openwisp_usersapiauthenticationsesameauthentication>`_.
+  <https://github.com/burlesquer/openwisp-users#2-openwisp_usersapiauthenticationsesameauthentication>`_.
 - Added ``OrganizationInvitation`` model.
 - Added `email verification success view
-  <https://github.com/openwisp/openwisp-users/issues/277>`_.
+  <https://github.com/burlesquer/openwisp-users/issues/277>`_.
 - Added logout success view.
 
 Changes
 ~~~~~~~
 
 - `Authentication REST API endpoints are now enabled by default
-  <https://github.com/openwisp/openwisp-users#openwisp_users_auth_api>`_.
+  <https://github.com/burlesquer/openwisp-users#openwisp_users_auth_api>`_.
 - Following changes have been made to the User model:
 
   - Increased max length of `User.location field
-    <https://github.com/openwisp/openwisp-users/commit/0088b0bdfe882e54cf6dfd2fbbafa7ccd79a8beb>`_.
+    <https://github.com/burlesquer/openwisp-users/commit/0088b0bdfe882e54cf6dfd2fbbafa7ccd79a8beb>`_.
   - Added `User.birth_date field
-    <https://github.com/openwisp/openwisp-users/issues/221>`_.
+    <https://github.com/burlesquer/openwisp-users/issues/221>`_.
   - Added `User.notes field
-    <https://github.com/openwisp/openwisp-users/commit/e8b4f0a125969453795a57333e8b2cb612e2743e>`_.
+    <https://github.com/burlesquer/openwisp-users/commit/e8b4f0a125969453795a57333e8b2cb612e2743e>`_.
   - Added `User.language field
-    <https://github.com/openwisp/openwisp-users/issues/261>`_.
+    <https://github.com/burlesquer/openwisp-users/issues/261>`_.
   - Made `User.email case insensitive
-    <https://github.com/openwisp/openwisp-users/issues/227>`_.
+    <https://github.com/burlesquer/openwisp-users/issues/227>`_.
     Email addresses will always get converted to lower case before
     storage and comparison.
 
@@ -77,7 +77,7 @@ Changes
 - Updated ``OrganizationUserInline`` to use ``autocomplete`` field
   for ``organization`` field.
 - **Backward incompatible:** removed `custom permission helpers
-  <https://github.com/openwisp/openwisp-users/issues/266>`_.
+  <https://github.com/burlesquer/openwisp-users/issues/266>`_.
 - **Backward incompatible:** the REST API endpoint ``/api/v1/user/token/``
   has been changed to ``/api/v1/users/token/`` for consistency
   with the rest of the API.
@@ -99,14 +99,14 @@ Bugfixes
 ~~~~~~~~
 
 - Fixed `internal server error on "/accounts/login/" page
-  <https://github.com/openwisp/openwisp-users/issues/218>`_
+  <https://github.com/burlesquer/openwisp-users/issues/218>`_
   when the social account app is disabled.
 - Fixed `error on restoring "Group" object with django-reversion
-  <https://github.com/openwisp/openwisp-users/issues/214>`_.
+  <https://github.com/burlesquer/openwisp-users/issues/214>`_.
 - Fixed `error on visiting Django admin URL for non-existing users
-  <https://github.com/openwisp/openwisp-users/issues/228>`_.
+  <https://github.com/burlesquer/openwisp-users/issues/228>`_.
 - Fixed `organization managers could escalate their privileges to superuser
-  <https://github.com/openwisp/openwisp-users/issues/284>`_.
+  <https://github.com/burlesquer/openwisp-users/issues/284>`_.
 
 Version 0.5.1 [2020-12-13]
 --------------------------
@@ -124,7 +124,7 @@ Bugfixes
 
 - Updating django-allauth to 0.44.x also fixes an `issue affecting
   OpenWISP Users in production deployment (experienced in ansible-openwisp2)
-  <https://github.com/openwisp/ansible-openwisp2/issues/233>`_
+  <https://github.com/burlesquer/ansible-openwisp2/issues/233>`_
 
 Version 0.5.0 [2020-11-18]
 --------------------------
@@ -154,7 +154,7 @@ Version 0.4.1 [2020-10-08]
 --------------------------
 
 - [chores] Allow passing a string or uuid to the
-  `Organization membership helpers <https://github.com/openwisp/openwisp-users#organization-membership-helpers>`_
+  `Organization membership helpers <https://github.com/burlesquer/openwisp-users#organization-membership-helpers>`_
 - [fix] The ``OrganizationUser`` instance of an ``OrganizationOwner``
   won't be allowed to be ``is_admin=False``
 - [fix] Fixed mutable class attribute in MultitenantAdminMixin
@@ -167,8 +167,8 @@ Version 0.4.0 [2020-08-23]
 Features
 ~~~~~~~~
 
-- [models] Added `organizations_managed <https://github.com/openwisp/openwisp-users#organizations-managed>`_ helper
-- [models] Added `organizations_owned <https://github.com/openwisp/openwisp-users#organizations-owned>`_ helper
+- [models] Added `organizations_managed <https://github.com/burlesquer/openwisp-users#organizations-managed>`_ helper
+- [models] Added `organizations_owned <https://github.com/burlesquer/openwisp-users#organizations-owned>`_ helper
 
 Changes
 ~~~~~~~
@@ -202,19 +202,19 @@ Version 0.3.0 [2020-08-14]
 Features
 ~~~~~~~~
 
-- [models] Added `swappable models and extensible classes <https://github.com/openwisp/openwisp-users#extend-openwisp-users>`_
-- [admin] Added support for `organization owners <https://github.com/openwisp/openwisp-users#organization-owners>`_
+- [models] Added `swappable models and extensible classes <https://github.com/burlesquer/openwisp-users#extend-openwisp-users>`_
+- [admin] Added support for `organization owners <https://github.com/burlesquer/openwisp-users#organization-owners>`_
 - [admin] Added default owner to each organization
-- [api] Added `ObtainTokenView REST API endpoint <https://github.com/openwisp/openwisp-users#obtain-authentication-token>`_ for bearer authentication
-- [api] Added `OPENWISP_USERS_AUTH_API <https://github.com/openwisp/openwisp-users#openwisp-users-auth-api>`_ and `OPENWISP_USERS_AUTH_THROTTLE_RATE <https://github.com/openwisp/openwisp-users#openwisp-users-auth-throttle-rate>`_ settings
-- [api] Added `Django REST Framework permission classes <https://github.com/openwisp/openwisp-users#django-rest-framework-permission-classes>`_
-- [models] Added `Organization membership helpers <https://github.com/openwisp/openwisp-users#organization-membership-helpers>`_
-- [models] Added `User permission helpers <https://github.com/openwisp/openwisp-users#permissions-helpers>`_
+- [api] Added `ObtainTokenView REST API endpoint <https://github.com/burlesquer/openwisp-users#obtain-authentication-token>`_ for bearer authentication
+- [api] Added `OPENWISP_USERS_AUTH_API <https://github.com/burlesquer/openwisp-users#openwisp-users-auth-api>`_ and `OPENWISP_USERS_AUTH_THROTTLE_RATE <https://github.com/burlesquer/openwisp-users#openwisp-users-auth-throttle-rate>`_ settings
+- [api] Added `Django REST Framework permission classes <https://github.com/burlesquer/openwisp-users#django-rest-framework-permission-classes>`_
+- [models] Added `Organization membership helpers <https://github.com/burlesquer/openwisp-users#organization-membership-helpers>`_
+- [models] Added `User permission helpers <https://github.com/burlesquer/openwisp-users#permissions-helpers>`_
 
 Changes
 ~~~~~~~
 
-- Enabled `organization owner admin <https://github.com/openwisp/openwisp-users#openwisp-organization-owner-admin>`_ by default
+- Enabled `organization owner admin <https://github.com/burlesquer/openwisp-users#openwisp-organization-owner-admin>`_ by default
 - [dependencies] Upgraded ``django-allauth 0.42.0``, ``django-extensions 3.0.2``,
   ``openwisp-utils 0.5[rest]`` and ``phonenumbers 8.12.0``
 
@@ -273,19 +273,19 @@ Version 0.1.11 [2019-12-13]
 Version 0.1.10 [2018-08-01]
 ---------------------------
 
-- `#26 <https://github.com/openwisp/openwisp-users/pull/26>`_:
+- `#26 <https://github.com/burlesquer/openwisp-users/pull/26>`_:
   [admin] Fixed Integrity error if trying to change email that exists
   (thanks to `@R9295 <https://github.com/R9295>`_)
-- `#27 <https://github.com/openwisp/openwisp-users/issues/27>`_:
+- `#27 <https://github.com/burlesquer/openwisp-users/issues/27>`_:
   [requirements] Added support for django 2.1 rc
 
 Version 0.1.9 [2018-07-27]
 --------------------------
 
-- `#25 <https://github.com/openwisp/openwisp-users/pull/25>`_:
+- `#25 <https://github.com/burlesquer/openwisp-users/pull/25>`_:
   [docs] Updated setup instructions in README
   (thanks to `@AlmogCohen <https://github.com/AlmogCohen>`_)
-- `#20 <https://github.com/openwisp/openwisp-users/issues/20>`_:
+- `#20 <https://github.com/burlesquer/openwisp-users/issues/20>`_:
   [tests] Fixed pending migration check
 - [requirements] Updated dependencies
 
@@ -302,46 +302,46 @@ Version 0.1.7 [2017-12-22]
 Version 0.1.6 [2017-12-02]
 --------------------------
 
-- `c5b648e <https://github.com/openwisp/openwisp-users/commit/c5b648e>`_:
+- `c5b648e <https://github.com/burlesquer/openwisp-users/commit/c5b648e>`_:
   [mixins] Extracted logic of ``OrgMixin`` to ``ValidateOrgMixin``
 
 Version 0.1.5 [2017-08-29]
 --------------------------
 
-- `#3 <https://github.com/openwisp/openwisp-users/issues/3>`_:
+- `#3 <https://github.com/burlesquer/openwisp-users/issues/3>`_:
   [admin] Allow operators to manage users without being
   able to change superuser related details
-- `31b13bb <https://github.com/openwisp/openwisp-users/commit/31b13bb>`_:
+- `31b13bb <https://github.com/burlesquer/openwisp-users/commit/31b13bb>`_:
   [requirements] Updated django-allauth to 0.33.0
 
 Version 0.1.4 [2017-05-15]
 --------------------------
 
-- `f49f900 <https://github.com/openwisp/openwisp-users/commit/f49f900>`_:
+- `f49f900 <https://github.com/burlesquer/openwisp-users/commit/f49f900>`_:
   [admin] Removed view on site link in organization admin
-- `2144b29 <https://github.com/openwisp/openwisp-users/commit/2144b29>`_:
+- `2144b29 <https://github.com/burlesquer/openwisp-users/commit/2144b29>`_:
   [admin] Removed view on site link in organization user admin
-- `dcef200 <https://github.com/openwisp/openwisp-users/commit/dcef200>`_:
+- `dcef200 <https://github.com/burlesquer/openwisp-users/commit/dcef200>`_:
   [requirements] Updated django-allauth to 0.32.0
 
 Version 0.1.3 [2017-03-15]
 --------------------------
 
-- `f9056e9 <https://github.com/openwisp/openwisp-users/commit/f9056e9>`_:
+- `f9056e9 <https://github.com/burlesquer/openwisp-users/commit/f9056e9>`_:
   [admin] Always require email
-- `c21c782 <https://github.com/openwisp/openwisp-users/commit/c21c782>`_:
+- `c21c782 <https://github.com/burlesquer/openwisp-users/commit/c21c782>`_:
   [mixins] Fixed bugged org pk comparison in ``_validate_org_relation``
-- `763c261 <https://github.com/openwisp/openwisp-users/commit/763c261>`_:
+- `763c261 <https://github.com/burlesquer/openwisp-users/commit/763c261>`_:
   [accounts] Added back frontend logout url
-- `b93de81 <https://github.com/openwisp/openwisp-users/commit/b93de81>`_:
+- `b93de81 <https://github.com/burlesquer/openwisp-users/commit/b93de81>`_:
   [admin] Added back site model
 
 Version 0.1.2 [2017-03-10]
 --------------------------
 
-- `b615f4c <https://github.com/openwisp/openwisp-users/commit/b615f4c>`_:
+- `b615f4c <https://github.com/burlesquer/openwisp-users/commit/b615f4c>`_:
   [admin] Unregister ``allauth.socialaccount`` models
-- `d6a2294 <https://github.com/openwisp/openwisp-users/commit/d6a2294>`_:
+- `d6a2294 <https://github.com/burlesquer/openwisp-users/commit/d6a2294>`_:
   [allauth] Added proxy URLs for ``allauth.acounts``
 
 Version 0.1.1 [2017-03-07]

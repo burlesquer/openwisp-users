@@ -1,8 +1,8 @@
 openwisp-users
 ==============
 
-.. image:: https://github.com/openwisp/openwisp-users/workflows/OpenWISP%20Users%20CI%20Build/badge.svg?branch=master
-   :target: https://github.com/openwisp/openwisp-users/actions?query=workflow%3A%22OpenWISP+Users+CI+Build%22
+.. image:: https://github.com/burlesquer/openwisp-users/workflows/OpenWISP%20Users%20CI%20Build/badge.svg?branch=master
+   :target: https://github.com/burlesquer/openwisp-users/actions?query=workflow%3A%22OpenWISP+Users+CI+Build%22
 
 .. image:: https://coveralls.io/repos/openwisp/openwisp-users/badge.svg
   :target: https://coveralls.io/r/openwisp/openwisp-users
@@ -44,7 +44,7 @@ Deploy it in production
 -----------------------
 
 An automated installer is available at `ansible-openwisp2
-<https://github.com/openwisp/ansible-openwisp2>`_.
+<https://github.com/burlesquer/ansible-openwisp2>`_.
 
 Install stable version from pypi
 --------------------------------
@@ -62,13 +62,13 @@ Install tarball:
 
 .. code-block:: shell
 
-    pip install https://github.com/openwisp/openwisp-users/tarball/master
+    pip install https://github.com/burlesquer/openwisp-users/tarball/master
 
 Alternatively you can install via pip using git:
 
 .. code-block:: shell
 
-    pip install -e git+git://github.com/openwisp/openwisp-users#egg=openwisp_users
+    pip install -e git+git://github.com/burlesquer/openwisp-users#egg=openwisp_users
 
 
 Setup (integrate in an existing django project)
@@ -323,7 +323,7 @@ A general live API documentation (following the OpenAPI specification) at ``/api
 Browsable web interface
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://github.com/openwisp/openwisp-users/raw/docs/docs/images/api-ui.png
+.. image:: https://github.com/burlesquer/openwisp-users/raw/docs/docs/images/api-ui.png
 
 Additionally, opening any of the endpoints listed below
 directly in the browser will show the `browsable API interface of Django-REST-Framework
@@ -827,7 +827,7 @@ In most cases this won't need to be changed, but it does need to
 be changed when the ``organization`` is defined only on a parent object.
 
 For example, in `openwisp-firmware-upgrader
-<https://github.com/openwisp/openwisp-firmware-upgrader>`_,
+<https://github.com/burlesquer/openwisp-firmware-upgrader>`_,
 ``organization`` is defined on ``Category`` and ``Build`` has a relation
 to ``category``, so the organization of Build instances is inferred from
 the organization of the Category.
@@ -1010,7 +1010,7 @@ To filter items based on the ``organization`` of their parent object,
 which is inheriting any of the mixin classes.
 
 Usage example: `organization_field
-<https://github.com/openwisp/openwisp-users#organization_field>`_.
+<https://github.com/burlesquer/openwisp-users#organization_field>`_.
 
 Multi-tenant filters capabilities for the browsable web UI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1092,14 +1092,14 @@ Admin Multitenancy mixins
     the way to do that is to list those model attributes here as a list
     of strings.
     See `how it is used in OpenWISP Controller
-    <https://github.com/openwisp/openwisp-controller/search?q=multitenant_shared_relations>`_
+    <https://github.com/burlesquer/openwisp-controller/search?q=multitenant_shared_relations>`_
     for a real world example.
   * ``multitenant_parent``: if the admin model does not have an
     ``organization`` field, but instead relies on a parent model
     which has the field, then you can specify here the field which
     points to the parent.
     See `how it is used in OpenWISP Firmware Upgrader
-    <https://github.com/openwisp/openwisp-firmware-upgrader/search?q=multitenant_parent>`_
+    <https://github.com/burlesquer/openwisp-firmware-upgrader/search?q=multitenant_parent>`_
     for a real world example.
 
 * **MultitenantOrgFilter**: an autocomplete admin filter that shows only organizations
@@ -1122,9 +1122,9 @@ Admin Multitenancy mixins
   the current user can manage, this shall be used for creating filters
   for related multitenant models.
 
-  Consider the following example of `IpAddressAdmin from openwisp-ipam <https://github.com/openwisp/openwisp-ipam/blob/956d9d25fc1ac339cb148ec7faf80046cc14be37/openwisp_ipam/admin.py#L216-L227>`_ .
+  Consider the following example of `IpAddressAdmin from openwisp-ipam <https://github.com/burlesquer/openwisp-ipam/blob/956d9d25fc1ac339cb148ec7faf80046cc14be37/openwisp_ipam/admin.py#L216-L227>`_ .
   ``IpAddressAdmin`` allows filtering
-  `IpAddress <https://github.com/openwisp/openwisp-ipam/blob/956d9d25fc1ac339cb148ec7faf80046cc14be37/openwisp_ipam/base/models.py#L276-L281>`_
+  `IpAddress <https://github.com/burlesquer/openwisp-ipam/blob/956d9d25fc1ac339cb148ec7faf80046cc14be37/openwisp_ipam/base/models.py#L276-L281>`_
   objects by ``Subnet`` that belongs to organizations managed by the user.
 
 .. code-block:: python
@@ -1209,9 +1209,9 @@ In order to implement your custom version of *openwisp-users*,
 you need to perform the steps described in this section.
 
 When in doubt, the code in the `test project
-<https://github.com/openwisp/openwisp-users/tree/master/tests/openwisp2/>`_
+<https://github.com/burlesquer/openwisp-users/tree/master/tests/openwisp2/>`_
 and the `sample app
-<https://github.com/openwisp/openwisp-users/tree/master/tests/openwisp2/sample_users/>`_
+<https://github.com/burlesquer/openwisp-users/tree/master/tests/openwisp2/sample_users/>`_
 will serve you as source of truth:
 just replicate and adapt that code to get a basic derivative of
 *openwisp-users* working.
@@ -1317,9 +1317,9 @@ before ``django.template.loaders.app_directories.Loader`` in your ``settings.py`
 Please refer to the following files in the sample app of the test project:
 
 - `openwisp_users/__init__.py
-  <https://github.com/openwisp/openwisp-users/blob/master/tests/openwisp2/sample_users/__init__.py>`_
+  <https://github.com/burlesquer/openwisp-users/blob/master/tests/openwisp2/sample_users/__init__.py>`_
 - `openwisp_users/apps.py
-  <https://github.com/openwisp/openwisp-users/blob/master/tests/openwisp2/sample_users/apps.py>`_
+  <https://github.com/burlesquer/openwisp-users/blob/master/tests/openwisp2/sample_users/apps.py>`_
 
 You have to replicate and adapt that code in your project.
 
@@ -1332,7 +1332,7 @@ the `"Applications" section in the django documentation
 
 For the purpose of showing an example, we added a simple ``social_security_number`` field in User model to the
 `models of the sample app in the test project
-<https://github.com/openwisp/openwisp-users/blob/master/tests/openwisp2/sample_users/models.py>`_.
+<https://github.com/burlesquer/openwisp-users/blob/master/tests/openwisp2/sample_users/models.py>`_.
 
 You can add fields in a similar way in your ``models.py`` file.
 
@@ -1371,7 +1371,7 @@ Create database migrations::
 Now, manually create a file ``0004_default_groups.py`` in the migrations directory
 just created by the ``makemigrations`` command and copy contents of
 the `sample_users/migrations/0004_default_groups.py
-<https://github.com/openwisp/openwisp-users/tree/master/tests/openwisp2/sample_users/migrations/0004_default_groups.py>`_.
+<https://github.com/burlesquer/openwisp-users/tree/master/tests/openwisp2/sample_users/migrations/0004_default_groups.py>`_.
 
 Then, run the migrations::
 
@@ -1385,7 +1385,7 @@ other OpenWISP modules will fail.
 ~~~~~~~~~~~~~~~~~~~~
 
 Refer to the `admin.py file of the sample app
-<https://github.com/openwisp/openwisp-users/blob/master/tests/openwisp2/sample_users/admin.py>`_.
+<https://github.com/burlesquer/openwisp-users/blob/master/tests/openwisp2/sample_users/admin.py>`_.
 
 To introduce changes to the admin, you can do it in two main ways which are described below.
 
@@ -1420,9 +1420,9 @@ usermodel_add_form
 When monkey patching the ``UserAdmin`` class to add add fields in the
 "Add user" form, you can use this function. In the example,
 `Social Security Number is added in the add form
-<https://github.com/openwisp/openwisp-users/tree/master/tests/openwisp2/sample_users/admin.py>`_:
+<https://github.com/burlesquer/openwisp-users/tree/master/tests/openwisp2/sample_users/admin.py>`_:
 
-.. image:: https://github.com/openwisp/openwisp-users/raw/docs/docs/images/add_user.png
+.. image:: https://github.com/burlesquer/openwisp-users/raw/docs/docs/images/add_user.png
    :alt: Social Security Number in Add form
 
 usermodel_change_form
@@ -1432,9 +1432,9 @@ When monkey patching the ``UserAdmin`` class to add fields in the
 "Change user" form to change / modify user form's profile section,
 you can use this function. In the example, `Social Security Number
 is added in the change form
-<https://github.com/openwisp/openwisp-users/tree/master/tests/openwisp2/sample_users/admin.py>`_:
+<https://github.com/burlesquer/openwisp-users/tree/master/tests/openwisp2/sample_users/admin.py>`_:
 
-.. image:: https://github.com/openwisp/openwisp-users/raw/docs/docs/images/change_user.png
+.. image:: https://github.com/burlesquer/openwisp-users/raw/docs/docs/images/change_user.png
    :alt: Social Security Number in Change form
 
 usermodel_list_and_search
@@ -1444,9 +1444,9 @@ When monkey patching the ``UserAdmin`` class you can use this
 function to make field searchable and add it to the user
 display list view. In the example,
 `Social Security Number is added in the changelist view
-<https://github.com/openwisp/openwisp-users/tree/master/tests/openwisp2/sample_users/admin.py>`_:
+<https://github.com/burlesquer/openwisp-users/tree/master/tests/openwisp2/sample_users/admin.py>`_:
 
-.. image:: https://github.com/openwisp/openwisp-users/raw/docs/docs/images/search_user.png
+.. image:: https://github.com/burlesquer/openwisp-users/raw/docs/docs/images/search_user.png
    :alt: Users Change List View
 
 2. Inheriting admin classes
@@ -1509,7 +1509,7 @@ monkey patching, you can proceed as follows:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please refer to the `urls.py
-<https://github.com/openwisp/openwisp-users/tree/master/tests/openwisp2/urls.py>`_
+<https://github.com/burlesquer/openwisp-users/tree/master/tests/openwisp2/urls.py>`_
 file in the sample project.
 
 For more information about URL configuration in django, please refer to the
@@ -1528,7 +1528,7 @@ In case you need to add breaking changes, you can overwrite the tests
 defined in the base classes to test your own behavior.
 
 See the `tests of the sample app
-<https://github.com/openwisp/openwisp-users/blob/master/tests/openwisp2/sample_users/tests.py>`_
+<https://github.com/burlesquer/openwisp-users/blob/master/tests/openwisp2/sample_users/tests.py>`_
 to find out how to do this.
 
 You can then run tests with::
@@ -1551,7 +1551,7 @@ that it is not required for extending *openwisp-users* to your app and this chan
 is required only if you plan to make changes to the API views.
 
 Create a view file as done in `API views.py
-<https://github.com/openwisp/openwisp-users/blob/master/tests/openwisp2/sample_users/views.py>`_.
+<https://github.com/burlesquer/openwisp-users/blob/master/tests/openwisp2/sample_users/views.py>`_.
 
 Remember to use these views in root URL configurations in point 11.
 
@@ -1573,9 +1573,9 @@ See `OpenWISP Support Channels <http://openwisp.org/support.html>`_.
 Changelog
 ---------
 
-See `CHANGES <https://github.com/openwisp/openwisp-users/blob/master/CHANGES.rst>`_.
+See `CHANGES <https://github.com/burlesquer/openwisp-users/blob/master/CHANGES.rst>`_.
 
 License
 -------
 
-See `LICENSE <https://github.com/openwisp/openwisp-users/blob/master/LICENSE>`_.
+See `LICENSE <https://github.com/burlesquer/openwisp-users/blob/master/LICENSE>`_.
